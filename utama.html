@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .footer {
+        background-color: #222831;
+        min-height: 530px;
+        margin-top: 100px;
+        margin-bottom: 0;
+        padding-bottom: 62px;
+    }
+    
+    .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        color: white;
+        width: 1320px;
+        margin: 0 auto;
+    }
+    
+    .readit-content {
+        margin-left: 80px;
+        margin-top: 50px;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    
+    .readit-title {
+        font-size: 30px;
+        font-weight: 800;
+        margin-bottom: 40px;
+    }
+    
+    .readit-p {
+        font-size: 18px;
+        line-height: 1.7em;
+        margin-bottom: 50px;
+    }
+    
+    .hover:hover {
+        box-shadow: 0 0 4px 2px #0080ff;
+    }
+    
+    .news-content {
+        margin-top: 60px;
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    
+    .news-title {
+        font-size: 22px;
+        margin-bottom: 50px;
+    }
+    
+    .news-gabungan {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    
+    .news-gabungan img {
+        margin-top: 25%;
+        margin-left: 40%;
+        position: relative;
+        width: auto;
+        height: auto;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<body>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="readit-content">
+                <p class="readit-title" style="color: white">
+                    About<b>Us</b>.
+                </p>
+                <p class="readit-p">Our Social Media : <br>
+                    <a class="hover" href="https://www.instagram.com/nicodemus_ks/" style="color: white;">@Nicodemus K.S</a> <br>
+                    <a class="hover" href="https://www.instagram.com/ivan_cristiansen/" style="color: white;">@Ivan C</a> <br>
+                    <a class="hover" href="https://www.instagram.com/juliuskayne/" style="color: white;">@Julius K</a>
+                </p>
+                <div class="readit-icon">
+                    <a href="https://www.instagram.com/smkimmanuelptk/">
+                        <img src="img/logo1.png" style="width: 160px;"></a>
+                </div>
+            </div>
+            <div class="news-content">
+                <p class="news-title" style="font-size: 20px;">INFORMASI : <br> <br> Alamat: Jl. Letnan Jendral Sutoyo, <br>Parit Tokaya, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78113 <br> <br> Jam buka: <br> Senin-Sabtu 06.00–15.00 <br> Minggu Tutup <br> <br> Telepon: (0561) 737921
+                    <br> Provinsi: Kalimantan Barat </p>
+            </div>
+
+            <div class="news-gabungan">
+                <img src="img/logo.png">
+            </div>
+        </div>
+
+        <div id="hri" style="text-align: center; color: white;">
+            <span id="hrip"></span>
+            <span id="d-m-y"></span>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = function() {
+        loadClock();
+    }
+
+    function loadClock() {
+        blntglthn = document.getElementById("d-m-y"),
+            hrip = document.getElementById("hrip"),
+
+            wkt = new Date(),
+            bln = wkt.getMonth(),
+            tgl = wkt.getDate(),
+            thn = wkt.getFullYear(),
+            hri = wkt.getDay();
+
+        function whichMonth() {
+            var blnfull = [
+                "Januari",
+                "Februari",
+                "Maret",
+                "April",
+                "Mei",
+                "Juni",
+                "Juli",
+                "Agustus",
+                "September",
+                "Oktober",
+                "November",
+                "Desember"
+            ];
+            var blnini = blnfull[bln];
+            blntglthn.innerHTML = tgl + " " + blnini + " " + thn;
+        }
+
+        function whichDay() {
+            mngu = [
+                "Minggu",
+                "Senin",
+                "Selasa",
+                "Rabu",
+                "Kamis",
+                "Jumat",
+                "Sabtu",
+            ];
+            var hrini = mngu[hri];
+            hrip.innerHTML = hrini;
+        }
+        whichMonth();
+        whichDay();
+    }
+</script>
+
+</html>

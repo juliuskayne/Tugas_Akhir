@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: white;
+}
+
+header {
+    padding: 10px 0 10px 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fcdf00;
+    justify-content: space-between;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .7);
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+.title {
+    position: relative;
+    padding: 5px 0px 5px 100px;
+}
+
+.title h1 {
+    color: #fff;
+    font-size: 36px;
+}
+
+.click {
+    position: relative;
+    padding: 10px 15px 10px 15px;
+    margin-right: 20px;
+}
+
+.click button {
+    position: relative;
+    padding: 4px 8px;
+    font-family: inherit;
+    font-size: 18px;
+    background-color: #fff;
+    color: #0080ff;
+    box-shadow: 0 1px 4px 0 #000;
+    border: none;
+    font-weight: bold;
+    transition: .3s ease-in-out;
+}
+
+.click button:hover {
+    box-shadow: 5px 5px 8px 0 #000;
+}
+
+.click button:active {
+    box-shadow: none;
+    color: red;
+}
+
+.box {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 500px;
+    display: none;
+    transform: scale(.6);
+    animation: zoom 1s ease-in-out;
+}
+
+.dark {
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 3;
+    display: none;
+    transform: scale(2);
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(.6);
+    }
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.login-head {
+    width: 140px;
+    position: relative;
+    border: none;
+    border-bottom: 20px solid #fff;
+    border-left: 14.7px solid transparent;
+    cursor: pointer;
+    top: -20px;
+    z-index: 1;
+}
+
+.login-head p {
+    position: absolute;
+    left: 25%;
+    color: black;
+}
+
+.register {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.register-head {
+    width: 140px;
+    position: relative;
+    border: none;
+    border-bottom: 20px solid #fff;
+    border-right: 14.7px solid transparent;
+    cursor: pointer;
+    top: -20px;
+}
+
+.register-head p {
+    position: absolute;
+    left: 18%;
+    color: black;
+}
+
+.register-body,
+.login-body {
+    position: relative;
+    z-index: -1;
+    top: -20px;
+    height: 300px;
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, .6);
+    border-bottom: 5px solid #f7ff00;
+    padding: 20px 35px 20px 25px;
+    color: black;
+}
+
+.register-head p:hover,
+.login-head p:hover {
+    color: #0080ff;
+    top: 2px;
+}
+
+.register-head:active,
+.login-head:active {
+    color: #0080ff;
+}
+
+.part {
+    margin-bottom: 8px;
+}
+
+.part input {
+    display: block;
+    width: 100%;
+    padding: 3px 5px;
+    border-radius: 3px;
+    border: 1px solid #d2d2d2;
+}
+
+.part input::placeholder {
+    font-family: inherit;
+}
+
+.button {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.button .close {
+    display: inline-block;
+    background-color: #f00;
+    border-radius: 5px;
+    color: white;
+    font-size: 24px;
+    padding: 5px 12px;
+    border: none;
+    flex: 0 0 45%;
+    max-width: 45%;
+    margin-right: 5px;
+    transition: .5s ease-in-out;
+}
+
+.loginbutton,
+.registerbutton {
+    flex: 0 0 45%;
+    max-width: 45%;
+    margin-left: 20px;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 24px;
+    color: white;
+    border: none;
+    display: inline-block;
+    transition: .5s ease-in-out;
+}
+
+.button .close:hover {
+    box-shadow: 0 5px 8px 1px rgba(0, 0, 0, 1);
+    background-color: #d00;
+}
+
+.button .close:active {
+    box-shadow: none;
+    background-color: #f00;
+}
+
+.loginbutton {
+    background-color: #16f5f5;
+}
+
+.registerbutton {
+    background-color: #00ff19;
+}
+
+.loginbutton:hover {
+    box-shadow: 0 5px 8px 1px #000;
+    background-color: #16d5d5;
+}
+
+.loginbutton:active {
+    box-shadow: none;
+    background-color: #16f5f5;
+}
+
+.registerbutton:hover {
+    box-shadow: 0 5px 8px 1px #000;
+    background-color: #00dd19;
+}
+
+.registerbutton:active {
+    box-shadow: none;
+    background-color: #00ff19;
+}
+
+.text {
+    height: auto;
+    width: 100%;
+    background-color: #ffb6c1;
+    padding: 3px 5px;
+    font-size: 16px;
+    color: white;
+}
+
+hr {
+    height: 3px;
+    margin: 12px 0px;
+    color: rgb(242, 242, 242);
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 1.3;
+}
+
+
+/*desc*/
+
+.desc1 {
+    margin: 0 auto;
+    width: 1080px;
+    margin-top: 50px;
+    padding: 0;
+    line-height: 20px;
+    color: black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.descimg1 {
+    flex: 0 0 48%;
+    max-width: 48%;
+    padding: 0 15px 0 0;
+}
+
+.desc1 h1 {
+    padding: 0 0 0 15px;
+    flex: 0 0 48%;
+    max-width: 48%;
+    padding-top: 200px;
+    font-family: poppins;
+}
+
+.desc2 {
+    margin: 0 auto;
+    width: 1080px;
+    margin-top: 50px;
+    padding: 0;
+    line-height: 20px;
+    color: black;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.descimg2 {
+    flex: 0 0 48%;
+    max-width: 48%;
+    padding: 0 0 0 20px;
+}
+
+.desc2 h1 {
+    padding: 0 15px 0 0;
+    flex: 0 0 48%;
+    max-width: 48%;
+    padding-top: 200px;
+    font-family: poppins;
+}
+
+.footer {
+    background-color: #222831;
+    min-height: 530px;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    width: 1320px;
+    margin: 0 auto;
+}
+
+.readit-content {
+    margin-left: 80px;
+    margin-top: 50px;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.readit-title {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.readit-p {
+    font-size: 18px;
+    line-height: 1.7em;
+    margin-bottom: 50px;
+}
+
+.hover:hover {
+    box-shadow: 0 0 4px 2px #0080ff;
+}
+
+.news-content {
+    margin-top: 60px;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.news-title {
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+.news-gabungan {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.news-gabungan img {
+    margin-top: 25%;
+    margin-left: 40%;
+    position: relative;
+    width: auto;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

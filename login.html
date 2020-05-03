@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Candal" />
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>JADWALKU</h1>
+        </div>
+        <div class="click" onclick="myClick()">
+            <button>LOGIN / SIGNUP</button>
+        </div>
+    </header>
+    <div class="dark">
+        <div class="box">
+            <div class="login">
+                <div class="login-head" onclick="logOpen()">
+                    <p>LOGIN</p>
+                </div>
+                <div class="login-body">
+                    <form class="log-form" action="php/login.php" method="post">
+                        <div class="part">
+                            <label for="nis1">NIS</label>
+                            <input type="text" id="nis" value="" class="nis" placeholder="Input Your NIS" onblur="this.placeholder= 'Input Your NIS'" onfocus="this.placeholder = ''" required autocomplete>
+                        </div>
+                        <div class="part">
+                            <label for="name">Name</label>
+                            <input type="text" id="nama" value="" class="name" placeholder="Input your Name" onblur="this.placeholder = 'Input Your Name'" onfocus="this.placeholder = ''" required autocomplete>
+                        </div>
+                        <div class="part">
+                            <label for="password">Password</label>
+                            <input type="password" id="pw" value="" class="password" placeholder="Input Your Password" onblur="this.placeholder = 'Input Your Password'" onfocus="this.placeholder = ''" required autocomplete>
+                        </div>
+                        <div class="text"></div>
+                        <div class="button">
+                            <button class="close" onclick="toClose()">Back</button>
+                            <button class="loginbutton" type="submit" onclick="login()">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="register">
+                <div class="register-head" onclick="regOpen()">
+                    <p>REGISTER</p>
+                </div>
+                <div class="register-body">
+                    <form class="reg-form" action="php/register.php" method="post">
+                        <div class="part">
+                            <label for="nis">NIS</label>
+                            <input type="text" class="nis" id="nis1" value="" placeholder="Input Your NIS" onblur="this.placeholder= 'Input Your NIS'" onfocus="this.placeholder = ''" required autocomplete>
+                        </div>
+                        <div class="part">
+                            <label for="name">Name</label>
+                            <input type="text" id="nama1" value="" class="name" placeholder="Input your Name" onblur="this.placeholder = 'Input Your Name'" onfocus="this.placeholder = ''" required autocomplete>
+                        </div>
+                        <div class="part">
+                            <label for="password">Password</label>
+                            <input type="password" id="pw1" value="" class="password" placeholder="Input Your Password" onblur="this.placeholder = 'Input Your Password'" onfocus="this.placeholder = ''" required autocomplete>
+                        </div>
+                        <div class="part">
+                            <label for="cpassword">Confirm Password</label>
+                            <input type="password" id="cpw" value="" class="cpassword" placeholder="Re-Type Your Password" onblur="this.placeholder = 'Re-Type Your Password'" onfocus="this.placeholder = ''" required autocomplete>
+                        </div>
+                        <div class="text"></div>
+                        <div class="button">
+                            <button class="close" onclick="toClose()">Back</button>
+                            <button class="registerbutton" type="submit" onclick="register()">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="desc1">
+        <div class="descimg1">
+            <img src="img/tugas.jpg" style=" max-width: 450px	; margin-top: 90px; position: relative; border-radius: 30%; border: 2px solid #000;">
+        </div>
+        <h1>Pemberian Tugas Yang Lebih Mudah!</h1>
+    </div>
+    <hr>
+    <div class="desc2">
+        <h1>Memudahkan Dalam Melihat Jadwal Harian!</h1>
+        <div class="descimg2">
+            <img src="img/jadwal.jpg" style=" max-width: 430px; margin-top: 90px; position: relative; border-radius: 30%; border: 2px solid #000;">
+        </div>
+    </div>
+    <hr>
+    <div class="desc1">
+        <div class="descimg1">
+            <img src="img/pengumuman.jpg" style=" max-width: 450px; margin-top: 90px; position: relative; border-radius: 30%; border: 2px solid #000;">
+        </div>
+        <h1>Pengumuman Lebih mudah Disampaikan!</h1>
+    </div>
+    <!-- desc-end -->
+
+    <div class="footer">
+        <div class="footer-content">
+            <div class="readit-content">
+                <p class="readit-title" style="color: white">
+                    About<b>Us</b>.
+                </p>
+                <p class="readit-p">Our Social Media : <br>
+                    <a class="hover" href="https://www.instagram.com/nicodemus_ks/" style="color: white;">@Nicodemus K.S</a> <br>
+                    <a class="hover" href="https://www.instagram.com/ivan_cristiansen/" style="color: white;">@Ivan C</a> <br>
+                    <a class="hover" href="https://www.instagram.com/juliuskayne/" style="color: white;">@Julius K</a>
+                </p>
+                <div class="readit-icon">
+                    <a href="https://www.instagram.com/smkimmanuelptk/">
+                        <img src="img/logo1.png" style="width: 160px;"></a>
+                </div>
+            </div>
+            <div class="news-content">
+                <p class="news-title" style="font-size: 20px;">INFORMASI : <br> <br> Alamat: Jl. Letnan Jendral Sutoyo, <br>Parit Tokaya, Kec. Pontianak Sel., Kota Pontianak, Kalimantan Barat 78113 <br> <br> Jam buka: <br> Senin-Sabtu 06.00–15.00 <br> Minggu Tutup <br> <br> Telepon: (0561) 737921
+                    <br> Provinsi: Kalimantan Barat </p>
+            </div>
+
+            <div class="news-gabungan">
+                <img src="img/logo.png">
+            </div>
+        </div>
+
+        <div id="hri" style="text-align: center; color: white;">
+            <span id="hrip"></span>
+            <span id="d-m-y"></span>
+        </div>
+    </div>
+</body>
+<script src="js/login.js"></script>
+
+</html>
