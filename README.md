@@ -1,5 +1,5 @@
 # Tugas_Akhir
-   halaman paling pertama homepage.php
+   halaman paling pertama homepage.php \n
    folder database adalah register.
 # Ketua --> nicodemus: membuat design di web, 
 # ivan: membuat design awal prototype dan membuat design di web, 
